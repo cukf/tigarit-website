@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-color: #334078;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--primary-color);
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+  
+  
+}
+
+.navbar {
+  background: linear-gradient(to right, rgba(255,0,0,0), rgba(60, 47, 235, 0.76));
+  margin: 1px;
+  padding: 0.1em;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  width: 100%;
+  height: auto;
+  max-width: 85px;
+}
+
+.navbar nav {
+  display: none;
+  align-items: center;
+  justify-items: center;
+}
+
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .mobile-menu {
+  cursor: pointer;
+}
+
+a {
+  color: #444444;
+}
+
+ul {
+  list-style-type: none;
+  margin: 1px;
+  padding: 1px;
+}
+
+.intro-sekcija {
+
+  overflow: hidden;
+  margin: 1px;
+  padding: 1px;  
+  max-width: 760px;
+  
+}
+
+.intro-sekcija:after {
+  content: '';
+  display: flex;
+  justify-content: center;
+
+}
+
+.intro-sekcija .mali-chookit {
+  display: flex;
+  height: 420px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  
+}
+
+.poruka {
+  position: relative;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  line-height: 1.5rem;
+  text-shadow: 10px 10px 5px #030101;
+  font-size: 18px;
+  font-weight: bold;
+  top: 0;
+  left: 0;
+  padding: 1em;
+  background-color: var(--primary-color);
+ 
+
+}
+
+
+.container-djel {
+ display: flex;
+ margin-left: 5em;
+ padding: 2em 1em;
+ margin-top: 1em;
+ margin-bottom: 1em;
+ justify-content: left;
+}
+ 
+ 
+.opis-djelatnosti {
+  background: #20272e;
+  color: white;
+}
+
+
+
+.djelatnost-slika {
+  display: none;
+}
+
+ul.lista-djelatnosti {
+  margin: 0;
+  padding-left: .1em;
+  display: grid;
+  grid-column: (minmax(19rem, 1fr))[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+
+ul.lista-djelatnosti li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+
+ul.lista-djelatnosti li::before {
+  content: '';
+  left: -2em;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("HandSign.png");
+  background-size: contain;
+  margin-right: .5em;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 70%;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to left, rgb(70, 67, 67), rgb(60, 47, 235));
+  height: 60vh;
+  padding: .1em;
+}
+
+nav ul.lijevi-dio-nava {
+  margin-top: 5em;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: .8em;
+  font-size: 1.3em;
+  text-align: left;
+}
+
+nav li a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: .5em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    color: black;
+    font-size: 1em;
+    padding: .1em 1em;
+  }
+  .navbar nav ul.lijevi-dio-nava {
+    margin: 0;
+  }
+  .navbar nav li.aktualni a {
+    font-weight: bold;
+  }
+
+  .navbar nav a:hover {
+    font-weight: bold;
+    background: var(--primary-color);
+    color: #ffffff;
+    border-radius: 5em;
+  }
+
+  .intro-sekcija {
+    margin: 1px;
+    padding: 1px;  
+    max-width: 1080px;
+    
+  }
+
+  
+}
+
+@media only screen and (min-width: 1080px) {
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+ 
+  
+  ul.lista-djelatnosti {
+    display: block;
+    margin-left: 5em;
+  }
+  ul.lista-djelatnosti li {
+    font-size: 1.4em;
+  }
+  ul.lista-djelatnosti li::before {
+    width: 30px;
+    height: 30px;
+  }
+  .opis-djelatnosti {
+    position: relative;
+  }
+  
+ 
+}
+
+@media only screen and (min-width: 1450px) {
+  .container-djel:before {
+    content: '';
+    position: relative;
+    width: 10%;
+    height: 20em;
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(60, 47, 235, 0.76));
+    left: 0;
+    top: -4em;
+  }
+  .container-djel:after {
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 20em;
+    background: url("/images/laptop200x300.jpg") no-repeat;
+    left: 2.1em;
+    top: -2em;
+  }
+}
+/*# sourceMappingURL=main.css.map */
+
+
+
+/*
+    .stranica {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.2fr 1.5fr 1.2fr .8fr;
+        grid-template-areas: 
+        "nav nav nav nav"
+        "sidebar main main main"
+        "sidebar sadrzaj1 sadrzaj2 sadrzaj3"
+        "sidebar footer footer footer";
+        grid-gap: 0.2rem;
+
+        }
+
+
+    main{
+        background-color: grey;
+        grid-area: main;
+    }
+    #sidebar {
+        background-color: brown;
+        grid-area: sidebar;
+    }
+
+    #sadrzaj1 {
+        background-color: red;
+        grid-area: sadrzaj1;
+        }
+
+    #sadrzaj2 {
+        background-color: violet;
+        grid-area: sadrzaj2;
+    }
+    #sadrzaj3 {
+        background-color: green;
+        grid-area: sadrzaj3;
+    }
+    #footer {
+        background-color: yellow;
+        grid-area: footer;
+    }
+    */
+
+
+    /* Set height to 100% for body and html to enable the background image to cover the whole page: 
+   .stranica {
+        display: grid;
+        height: 100em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:"bgimg";
+        
+    }
+        .bgimg {
+            
+            background-color: #007AF3;
+            background-image: url('under-construction-g116c3017f_1920.png');
+            background-repeat: no-repeat;
+            
+           
+            height: 70%;
+             Center the background image
+            background-position: center;
+            
+            Scale and zoom in the image 
+            background-size: contain;
+            Add position: relative to enable absolutely positioned elements inside the image (place text) 
+            position: relative;
+            Add a white text color to all elements inside the .bgimg container
+            color: #ec9c1c;
+            /* Add a font 
+            font-family: "Courier New", Courier, monospace;
+            /* Set the font-size to 25 pixels 
+            font-size: 25px;
+        }
+  
+        /* Position text in the top-left corner
+            .topleft {
+                position: absolute;
+                top: 0;
+                left: 16px;
+            }
+        */
+        /* Position text in the bottom-left corner
+            .bottomleft {
+                position: absolute;
+                bottom: 0;
+                left: 16px;
+            }
+        */
+  
+        /* Position text in the middle 
+        .middle {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }    
+*/

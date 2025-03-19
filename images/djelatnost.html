@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chook-IT djelatnost</title>
+        <link type="text/css" rel="stylesheet" href="djelatnost.css">
+    </head>
+    <body>
+    
+        
+        <nav class="glavni-nav">
+            <a class="logo" href="index.html"><img class="img-logo" src="cuk-bijeli.png"  title="Logo Cuk" alt="Logo Cuk"></a>
+         <!-- slijedi hamburger koji ima svoj id radi poziva iz javascripta to je samo za mobilni meni --> 
+            <img id="mobile-cta" class="mobile-menu" src="menu.svg" alt="Hamburger meni">
+
+            <div class="pocetni-navbar">
+                <img id="mobile-exit" class="mobile-menu-exit" src="exit.svg" alt="Close navigation">
+             
+                    <ul class="primary-nav">
+                        <li class="current"><a href="index.html">Naslovnica</a></li>
+                        <li><a href="djelatnost.html">Djelatnost</a></li>
+                        <li><a href="#">Cjenik</a></li>
+                    </ul>
+                    <ul class="secondary-nav">
+                        <li><a href="#">Kontakt</a></li>
+                        <li class="go-premium-cta"><a href="#">Registracija</a></li>
+                    </ul>
+            </div>
+        </nav>    
+            <!-- Ovo je ubačena sekcija za under construction -->    
+        <div class="stranica">       
+            <div class="bgimg">
+                <div class="middle">
+                    <h1>COMING SOON</h1>
+                </div>
+            </div>
+        </div> 
+
+
+
+
+
+            <!--                 
+            </nav>
+                <main>Main</main>
+                <div id="sidebar">
+                    Sidebar
+                </div>
+                <div id="sadrzaj1">
+                    sadržaj1
+                </div>
+                <div id="sadrzaj2">
+                    sadržaj2
+                </div>
+                <div id="sadrzaj3">
+                    sadržaj3
+                </div>
+                <div id="footer">
+                    Footer
+                </div>
+             -->    
+        </div>
+
+   
+        <script>
+
+            const mobileBtn = document.getElementById('mobile-cta')
+                nav = document.querySelector('nav')
+                 mobileBtnExit = document.getElementById('mobile-exit');
+        
+                mobileBtn.addEventListener('click', () => {
+                nav.classList.add('menu-btn');
+                })
+
+                mobileBtnExit.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+                })
+
+        </script>
+
+    </body>
+</html>

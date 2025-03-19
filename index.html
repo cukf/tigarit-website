@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- Radna verzija - za github - verzija 0.1 -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chook-IT</title>
+        <link type="text/css" rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+       <div class="navbar">
+    <!-- Ovo je početak navigacije na vrhu -->       
+           <div class="container">
+               <a class="logo" href="index.html"><img class="img-logo" src="images/sova_hires_transparentbckgrnd200x200.png"  title="Logo Cuk" alt="Logo Cuk" height="65" width="65"></a>
+                <!-- slijedi hamburger koji ima svoj id radi poziva iz javascripta to je samo za mobilni meni --> 
+                <img id="mob-meni" class="mobile-menu" src="images/menu.svg" alt="Hamburger meni">
+
+               <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="Close navigation">
+                
+                    <ul class="lijevi-dio-nava">
+                       <li class="aktualni"><a href="index.html">Naslovnica</a></li>
+                       <li><a href="djelatnost.html">Djelatnost</a></li>
+                       <li><a href="partneri.html">Partneri</a></li>
+                       <li><a href="#">Cjenik</a></li>
+                    </ul>
+                    <ul class="desni-dio-nava">
+                        <li><a href="#">Kontakt</a></li>
+                        <li class="go-premium-cta"><a href="#">Registracija</a></li>
+                    </ul>
+               </nav>
+            </div>
+        </div>
+       
+<!-- Ovo je početak sadržaja ispod navigacije glavna-poruka je podijeljen na left col i ilustraciju --> 
+       <section class="glavna-poruka">
+           <div class="container1">
+               <div class="left-col">
+                   
+                   <h1>This is just an infant website <br>Please come back in a while <br>and check if our infant has grown up!</h1>
+              
+               </div>
+<!--
+               <img src="under-construction-g116c3017f_1920.png" class="glavna-poruka-img" alt="Slika">  -->
+           </div>
+       </section>
+<!-- Ovo je početak slijedeće sekcije ispod illustrationa ono sa pointerom i ostalo --> 
+       <section class="opis-djelatnosti">
+           <div class="container">
+               <ul class="lista-djelatnosti">
+                   <li>Web dizajn</li>
+                   <li>Registracija domene</li>
+                   <li>Hosting</li>
+                   <li>Izrada web stranica</li>
+                   <li>Održavanje web stranica</li>
+                   <li>Ostala IT rješenja</li>
+                </ul>
+
+                
+           </div>
+       </section>
+<!-- Ovo je početak slijedeće sekcije ispod slike sa mobacem plavo i sa tri navodna komentara --> 
+       <section class="komentari-section">
+           <div class="container">
+               <ul>
+                   <li>
+                       <img src="images/zgodna-crnka-prozirna_pozadina-mala.png" alt="Charming black haired woman">
+                       <blockquote>Tim s kojim uvijek znam na čemu sam</blockquote>
+                       <cite>Charming Doe</cite>
+                   </li>
+                   <li>
+                        <img src="images/beba_rex_doe.png" alt="Rex komentator">
+                        <blockquote>Obožavam tvrku Čuk-IT više od kostiju! Vauuu - stavili su mi sliku na internet!!</blockquote>
+                        <cite>Puppy Rex Doe</cite>
+                    </li>
+                    <li>
+                        <img src="images/zena_u_plavom_kaputu_cutout_prozirna_ mala.png" alt="Smiling woman wearing blue coat">
+                        <blockquote>Tvrtka Čuk-IT otvorila mi je jednu sasvim novu dimenziju prezentacije poslovanja na internetu.</blockquote>
+                        <cite>Lilly Doe</cite>
+                    </li>
+
+               </ul>
+           </div>
+       </section>
+
+       <section class="contact-section">
+           <div class="container">
+               <div class="contact-left">
+                   <h2>Kontakt</h2>
+
+                   <form action="">
+                       <label for="name">Ime i prezime</label>
+                       <input type="text" id="name" name="name">
+                       <br>
+                       <label for="email">E-mail</label>
+                       <input type="email" id="email" name="email">
+
+                       <label for="message">Poruka</label>
+                       <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                       <input type="submit" class="send-message-cta" value="Pošalji poruku">
+
+                   </form>
+               </div>
+               <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22205.521311606877!2d15.753947492379373!3d45.91750416245848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765c67eb8f5f8bf%3A0x400ad50862bb720!2zT3DEh2luYSBQdcWhxIdh!5e0!3m2!1shr!2shr!4v1641233416315!5m2!1shr!2shr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+               </div>
+           </div>
+
+       </section>
+
+       <script>
+
+            const mobileBtn = document.getElementById('mob-meni')
+                  nav = document.querySelector('nav')
+                  mobileBtnExit = document.getElementById('mobile-exit');
+            
+                  mobileBtn.addEventListener('click', () => {
+                  nav.classList.add('menu-btn');
+                  })
+
+                  mobileBtnExit.addEventListener('click', () => {
+                  nav.classList.remove('menu-btn'); })
+
+       </script>
+
+
+
+    </body>
+</html>
